@@ -1,0 +1,84 @@
+@import 'variables'
+
+.header
+	background: white
+
+.header__top
+	font-size: 0.8rem
+	border-bottom: 1px solid $borderColor
+	padding: .7em 0 .5em 0
+
+.header__links
+	a
+		margin-right: 30px
+		display: inline-block
+		color: $grayColor
+		text-transform: uppercase
+		transition: all .4s ease
+		position: relative
+		&.active
+			color: $blueColor
+			font-family: 'LatoWebBold'
+			&:after
+				width: 100%
+				height: 2px
+				background: $blueColor
+				content: ' '
+				display: block
+				position: absolute
+				bottom: -.6em
+				left: 0
+		&:last-child
+			margin-right: 0
+		&:hover
+			color: $blueColor
+
+.header__center
+	padding: 1.2em 0 1em 0
+
+.header__logo
+	position: relative
+	.ico
+		position: absolute
+		top: 0
+		left: 0
+
+.header__logo-name
+	font-size: 1.2rem
+	font-family: 'LatoWebBold'
+	margin-left: 6.5rem
+	display: block
+	padding-top: .3em
+.header__slogan
+	display: inline-block
+	padding-top: .2em
+	margin-top: .5em
+	font-size: .7rem
+	margin-left: 6.5rem
+	opacity: .7
+	border-top: 1px solid $borderColor
+
+.header__phone
+	display: inline-block
+	padding-top: .3em
+	&--smaller, &--email
+		.header__phone-helper
+			font-size: 0.65rem
+		.header__phone-digits
+			font-size: 1rem
+	&--smaller
+		padding-right: 2em
+
+
+.header__phone-digits
+	font-size: 1.4rem
+	line-height: 1em
+	display: block
+	font-family: 'LatoWebBold'
+	color: $blueColor
+
+.header__phone-helper
+	font-size: 0.8rem
+	opacity: .7
+	padding-top: .2em
+	display: inline-block

@@ -1,0 +1,56 @@
+@import 'variables'
+
+.top-menu
+	background: $primaryColor
+	color: white
+
+.top-menu__list
+	text-transform: uppercase
+	text-align: justify
+	line-height: 0em
+	font-size: 0em
+	a
+		display: inline-block
+		font-size: 1.1rem
+		line-height: 1rem
+		transition: all .4s ease
+		position: relative
+		padding: 1em .5em
+		&:after
+			display: block
+			height: 20px
+			width: 1px
+			background: rgba(white, .5)
+			content: ' '
+			position: absolute
+			right: -1em
+			top: 50%
+			transform: translateY(-50%)
+		&:last-child:after
+			display: none
+		&:before,
+			display: block
+			content: ' '
+			position: absolute
+			left: 50%
+			right: 50%
+			bottom: 2px
+			height: 3px
+			background: white
+			transition-property: left, right
+			transition-duration: 0.3s
+			transition-timing-function: ease-out
+		&:hover, &.active
+			&:before
+				left: .5em
+				right: .5em
+		&.active
+			background: rgba(white, .1)
+
+	&:after
+		display: inline-block
+		content: ''
+		height: 1px
+		width: 100%
+		font-size: 0
+		line-height: 0

@@ -1,0 +1,47 @@
+@import "mq"
+@import "variables"
+
+//custom collumn
+.col-5
+	width: 20%
+	padding-left: 15px
+	padding-right: 15px
+	float: left
+	position: relative
+	@include mq($until: tablet)
+		width: 100%
+
+.pt30
+	padding-top: 1.8rem
+.pt40
+	padding-top: 2.3rem
+.pt50
+	padding-top: 3rem
+
+.mt40
+	margin-top: 2.3rem
+	
+.separator-top
+	border-top: 1px solid $borderColor
+	padding-top: 2.5em
+	padding-bottom: 2.5em
+
+.light-bg
+	background: $lightColor
+
+.dark-bg
+	background: darken($blueColor, 0%)
+	color: white
+
+.text-center
+	text-align: center
+
+.heading
+	font-size: 2rem
+	font-family: 'LatoWeb'
+
+.subheading
+	opacity: .8
+	font-size: 1rem
+	margin-top: 1.5em
+	line-height: 1.3em

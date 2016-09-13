@@ -1,0 +1,96 @@
+@import "variables"
+
+.price
+	background: white
+
+.price__block
+	margin-top: 2em
+	margin-bottom: 2em
+
+.price__name
+	color: $greenColor
+	font-size: 1.5rem
+
+.price__description
+	opacity: .8
+	margin-top: 1em
+	font-size: 0.8rem
+	margin-bottom: .5rem
+	min-height: 3.5em
+
+.price__icons
+	border-top: 1px solid $borderColor
+	padding-top: .5em
+
+.price__icon-row
+	padding: .3em 0em
+	.ico
+		width: 1.2em
+		height: 1.2em
+		margin-right: .5em
+	span
+		vertical-align: 0.2em
+
+.price__availability
+	position: absolute
+	bottom: 3.8em
+	right: 15px
+	.ico
+		border-radius: 50%
+		width: .8em
+		height: .8em
+		cursor: pointer
+		&.ico-available
+			background: $greenColor
+		&.ico-non-available
+			background: $borderColor
+
+.price__value
+	font-size: 1.6em
+	font-family: 'LatoWebBold'
+	margin-top: .5rem
+	border-top: 1px solid $borderColor
+	padding: .7em 0 .7em 0
+	&--no
+		font-size: 1.2em
+		opacity: .8
+		padding: 0.9em 0 1em 0
+
+
+// TABLE
+
+.price-table
+	
+	.table
+		thead, .price
+			background: $primaryColor
+			color: white
+		tbody
+			tr:nth-child(odd):not(.price)
+				background: rgba($borderColor, .35)
+			tr:hover:not(.price)
+				background: rgba($borderColor, .7)
+		td
+			padding: .5rem
+
+.price-table__switcher
+	text-align: center
+	margin-top: 1em
+	margin-bottom: .5em
+	a
+		display: inline-block
+		font-size: 1.4rem
+		margin: .5em
+		padding-bottom: .3em
+		border-bottom: 1px dashed $fontColor
+		&.active
+			color: $greenColor
+			font-family: 'LatoWebBold'
+			border-color: $greenColor
+
+.price-table__tables
+	div
+		display: none
+		&.active
+			display: block
+

@@ -1,0 +1,58 @@
+@import 'variables'
+
+.home-nav
+  padding: 2em 0
+  background: $lightColor
+
+.home-nav__block
+  display: block
+  margin-bottom: 2em
+  background: white
+  border: 1px solid $borderColor
+  border-radius: 5px
+  position: relative
+  overflow: hidden
+  &:hover
+    .home-nav__image:after
+      width: 150%
+    .home-nav__name
+      bottom: 50%
+
+.home-nav__image
+  height: 11em
+  overflow: hidden
+  position: relative
+  &:after
+    position: absolute
+    content: ' '
+    display: block
+    top: 50%
+    left: 50%
+    background: rgba(darken($primaryColor, 10%), .6)
+    transform: translate(-50%, -50%) skewX(-30deg)
+    transition: width .4s ease-in
+    width: 0%
+    height: 100%
+  img
+    width: 100%
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.home-nav__name
+  position: absolute
+  display: inline-block
+  left: 50%
+  bottom: -5em
+  text-align: center
+  padding: .6em 1em
+  font-size: 1.1rem
+  line-height: 1.2em
+  color: white
+  background: rgba(black, .5)
+  border-radius: 1em
+  transform: translate(-50%, 50%)
+  transition-property: bottom
+  transition-duration: .4s
+  transition-timing-function: ease
